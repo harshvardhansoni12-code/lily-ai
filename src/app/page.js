@@ -1,3 +1,10 @@
+"use client";
+import { DashBoard } from "../../components/dashboard/dashboard";
+
 export default function Home() {
-  return <div className=""></div>;
+  return (
+    <div>
+      <DashBoard />
+    </div>
+  );
 }
