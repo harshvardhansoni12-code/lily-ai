@@ -7,7 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -122,9 +122,53 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground text-base leading-relaxed;
+    font-family:
+      var(--font-geist-sans),
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      "Noto Sans",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   html {
     @apply font-sans;
+  }
+  h1 {
+    @apply text-4xl font-bold tracking-tight;
+    font-family: var(--font-geist-sans);
+  }
+  h2 {
+    @apply text-3xl font-bold tracking-tight;
+    font-family: var(--font-geist-sans);
+  }
+  h3 {
+    @apply text-2xl font-semibold tracking-tight;
+    font-family: var(--font-geist-sans);
+  }
+  h4 {
+    @apply text-xl font-semibold;
+    font-family: var(--font-geist-sans);
+  }
+  p {
+    @apply text-base font-normal leading-relaxed;
+    font-family: var(--font-geist-sans);
+  }
+  button {
+    @apply font-semibold;
+    font-family: var(--font-geist-sans);
+  }
+  input,
+  textarea,
+  select {
+    @apply text-base;
+    font-family: var(--font-geist-sans);
   }
 }

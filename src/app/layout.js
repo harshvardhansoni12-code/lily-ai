@@ -1,15 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins, Fira_Code } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "../../components/navbar/navbar";
 
-const geistSans = Geist({
+const poppins = Poppins({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
+const firaCode = Fira_Code({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  weight: ["400", "600"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -21,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${poppins.variable} ${firaCode.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <NavBar />

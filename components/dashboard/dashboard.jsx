@@ -15,11 +15,17 @@ export const DashBoard = () => {
     setPdf(file);
     //
   };
+
+  const handleSubmit = () => {
+    if (!pdf) return;
+    // Handle file submission logic here
+    console.log("Submitting file:", pdf);
+  };
   return (
-    <div className="h-screen w-screen flex justify-center items-center">
+    <div className="h-screen w-screen flex justify-center items-center gap-2">
       <div>
         <Input
-          className="h-30"
+          className="cursor-pointer p-2 w-[300px] h-10"
           placeholder="Enter text..."
           value={pdf ? pdf.name : ""}
           onClick={DesktopClick}
@@ -33,9 +39,7 @@ export const DashBoard = () => {
           className="hidden"
         />
       </div>
-      <div>
-        <Button>submit</Button>
-      </div>
+      <Button onClick={handleSubmit}>Submit</Button>
     </div>
   );
 };
